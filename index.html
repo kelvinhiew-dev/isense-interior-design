@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="iSense Interior Design: interior design and custom carpentry. Contact us on WhatsApp 012-3299880.">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>iSense Interior Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@300;400;500&family=Noto+Serif+SC:wght@500;600&family=Noto+Sans+SC:wght@300;400;500&display=swap">
+<style>
+/* Layout: luxury showroom. Dark full-bleed hero with an animated gold line-drawn room and a drifting outline watermark; light stone body; centred serif headings that pair upright capitals with an italic line; champagne-gold buttons; staggered illustrated frames; dark contact band and black footer. Deliberately single-theme (light body, dark hero). */
+:root{
+  color-scheme:light;
+  --paper:#EFEEEC; --paper-2:#E5E2DD; --card:#F7F6F4; --ink:#1C1C1C; --muted:#5E5B57; --line:#CFCBC4;
+  --gold:#B89E6A; --gold-deep:#8F7646; --gold-soft:#D9C9A6;
+  --night:#161616; --night-2:#22211F; --night-line:#3A3732; --on-night:#F2EFE9; --night-muted:#ABA59B;
+  --wa:#1E8E4E; --on-wa:#FFFFFF; --bubble:#DCF3D3;
+  --ply-a:#E4D0A6; --ply-b:#CBA56C; --glue:#7A5530; --oak:#B9894F; --mdf:#A98D66; --teak:#7E5230;
+  --chip:#B8A383; --quartz:#ECEBE7; --white-face:#F5F3EE; --charcoal:#3A3E40;
+  --f-serif:"Bodoni Moda","Noto Serif SC",Didot,"Times New Roman",serif;
+  --f-sans:"Jost","Noto Sans SC","Segoe UI","Microsoft YaHei",system-ui,sans-serif;
+}
+html:not(.zh) [lang="zh"]{display:none!important}
+html.zh [lang="en"]{display:none!important}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-sans);font-weight:400;font-size:1rem;line-height:1.7;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+p{margin:0}
+h1,h2,h3{margin:0;font-family:var(--f-serif);font-weight:400;text-wrap:balance}
+.display{text-transform:uppercase;letter-spacing:.01em;line-height:1.02}
+.display em{display:block;font-style:italic;text-transform:none;letter-spacing:0}
+h2.display{font-size:clamp(2rem,4.6vw,3.6rem)}
+h3{font-size:1.45rem;text-transform:uppercase;letter-spacing:.02em;line-height:1.2}
+html.zh .display{line-height:1.25;letter-spacing:.06em}
+html.zh .display em{font-style:normal;color:var(--gold-deep)}
+html.zh h3{letter-spacing:.06em}
+.center{text-align:center}
+.center .lede{margin-inline:auto}
+.lede{max-width:58ch;color:var(--muted);font-size:1.02rem}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:15px 28px;font-family:var(--f-sans);font-weight:500;font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .3s ease,color .3s ease,border-color .3s ease}
+html.zh .btn{letter-spacing:.08em;font-size:.95rem}
+.btn .arr{width:22px;height:10px;flex:none;transition:transform .3s ease}
+.btn:hover .arr{transform:translateX(5px)}
+.btn-gold{background:var(--gold);color:#FFFFFF}
+.btn-gold:hover{background:var(--gold-deep)}
+.btn-outline{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-outline:hover{background:var(--ink);color:var(--paper)}
+.btn-outline-light{border-color:var(--gold);color:var(--on-night)}
+.btn-outline-light:hover{background:var(--gold);color:#FFFFFF}
+.btn-wa{background:var(--wa);color:var(--on-wa)}
+.btn-wa svg.w{width:20px;height:20px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.center .btns{justify-content:center}
+
+/* header */
+.top{position:fixed;top:0;left:0;right:0;z-index:30;padding-top:env(safe-area-inset-top,0px);transition:background .35s ease,box-shadow .35s ease}
+.top.solid{background:var(--night);box-shadow:0 8px 30px -20px #000}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.logo{display:inline-flex;background:#FFFFFF;padding:4px 10px;line-height:0}
+.logo img{height:42px;width:auto;display:block}
+.nav{display:flex;align-items:center;gap:26px}
+.nav .link{color:var(--on-night);text-decoration:none;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;position:relative;padding-block:6px}
+html.zh .nav .link{letter-spacing:.08em;font-size:.92rem}
+.nav .link::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.nav .link:hover::after{transform:scaleX(1)}
+.langs{display:inline-flex;border:1px solid var(--night-line)}
+.langs button{font:inherit;font-size:.8rem;letter-spacing:.08em;background:none;border:0;color:var(--night-muted);padding:7px 11px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--gold);color:#FFFFFF}
+.top .btn{padding:11px 18px}
+@media (max-width:1020px){.nav .link{display:none}}
+@media (max-width:520px){.top .btn .lbl{display:none}.top .btn{padding:11px 13px}.logo img{height:34px}.nav{gap:10px}}
+
+/* hero */
+.hero{position:relative;background:radial-gradient(ellipse at 60% 30%,#2B2824 0,var(--night) 70%);color:var(--on-night);overflow:hidden}
+.hero .scene{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;pointer-events:none}
+.hero .scene svg{width:min(1300px,140%);height:auto;opacity:.95}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,22,22,.55) 0,rgba(22,22,22,.25) 45%,rgba(22,22,22,.85) 100%);pointer-events:none}
+.hero .inner{position:relative;z-index:2;text-align:center;padding-block:calc(170px + env(safe-area-inset-top,0px)) 190px}
+.tagline{font-size:.8rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold-soft)}
+html.zh .tagline{letter-spacing:.3em;font-size:.95rem}
+.hero h1{font-size:clamp(2.6rem,7vw,5.6rem);margin-top:18px;text-shadow:0 2px 30px rgba(0,0,0,.4)}
+.hero .lede{color:#D8D2C8;margin:22px auto 0}
+.hero .btns{justify-content:center}
+.watermark{position:absolute;left:0;bottom:-0.12em;z-index:1;white-space:nowrap;font-family:var(--f-serif);font-size:clamp(4rem,15vw,13rem);line-height:1;text-transform:uppercase;letter-spacing:.04em;
+  color:transparent;-webkit-text-stroke:1px rgba(217,201,166,.28);animation:drift 40s linear infinite alternate;pointer-events:none}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-30%)}}
+.scroll-cue{position:absolute;z-index:2;left:50%;bottom:28px;width:1px;height:56px;background:linear-gradient(var(--gold),transparent);transform:translateX(-50%);overflow:hidden}
+.scroll-cue::after{content:"";position:absolute;left:-1px;width:3px;height:14px;background:var(--gold-soft);animation:cue 2s ease-in-out infinite}
+@keyframes cue{from{top:-14px}to{top:56px}}
+
+/* gold line room (hero) */
+.room .ln{stroke:var(--gold);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0;fill-opacity:1;
+  animation:draw 1.8s cubic-bezier(.4,.1,.2,1) var(--d,0s) both, fillin 1s ease calc(var(--d,0s) + 1s) both}
+@keyframes draw{from{stroke-dashoffset:1}}
+@keyframes fillin{from{fill-opacity:0}}
+.room .h-wall{fill:#24221F} .room .h-wood{fill:#4A3B2C} .room .h-wood2{fill:#5A4835} .room .h-glass{fill:#1E2327} .room .h-sofa{fill:#34322F}
+.room .h-sofa2{fill:#2C2A27} .room .h-gold{fill:var(--gold)} .room .h-none{fill:none} .room .h-leaf{fill:#3E4E3A} .room .h-dark{fill:#121212}
+.room .lamp{transform-box:view-box;transform-origin:var(--ox) 0;animation:sway 5s ease-in-out infinite alternate}
+.room .lamp.l2{animation-duration:6s;animation-delay:-2s}
+.room .glow{fill:url(#glow);animation:glow 3.2s ease-in-out infinite alternate}
+.room .beam{animation:beam 8s ease-in-out infinite alternate}
+.room .plant{transform-box:view-box;transform-origin:1105px 520px;animation:leaf 4.5s ease-in-out infinite alternate}
+.room .sweep{fill:#FFFFFF;opacity:.1;animation:sweep 6s ease-in-out 3s infinite}
+@keyframes sway{from{transform:rotate(-2.5deg)}to{transform:rotate(2.5deg)}}
+@keyframes glow{from{opacity:.45}to{opacity:1}}
+@keyframes beam{from{opacity:.35}to{opacity:.8}}
+@keyframes leaf{from{transform:rotate(-3deg)}to{transform:rotate(3deg)}}
+@keyframes sweep{0%{transform:translateX(-80px)}55%,100%{transform:translateX(300px)}}
+
+/* ribbon */
+.ribbon{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;background:var(--paper)}
+.ribbon .track{display:inline-flex;padding-block:18px;animation:marquee 40s linear infinite}
+.ribbon .it{display:inline-flex;align-items:center;gap:28px;padding-right:28px;font-family:var(--f-serif);font-style:italic;font-size:1.5rem;color:var(--ink)}
+html.zh .ribbon .it{font-style:normal;font-size:1.25rem;letter-spacing:.1em}
+.ribbon .it::after{content:"";width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* sections */
+.sec>.wrap{padding-block:110px 0}
+@media (max-width:760px){.sec>.wrap{padding-block:80px 0}}
+.rule{height:1px;background:var(--line);border:0;margin:110px 0 0}
+
+/* staggered gallery */
+.gallery{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:20px;margin-top:64px;align-items:start}
+.frame{position:relative;overflow:hidden;background:var(--paper-2);margin:0}
+.frame svg{display:block;width:100%;height:auto}
+.frame figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;color:#FFFFFF;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;
+  background:linear-gradient(transparent,rgba(0,0,0,.55));transform:translateY(100%);transition:transform .4s ease}
+html.zh .frame figcaption{letter-spacing:.08em;font-size:.9rem}
+.frame:hover figcaption{transform:none}
+.frame svg .art{transition:transform 1.2s cubic-bezier(.2,.7,.2,1);transform-origin:center;transform-box:fill-box}
+.frame:hover svg .art{transform:scale(1.05)}
+.g1{grid-column:1/5;margin-top:0}
+.g2{grid-column:5/9;margin-top:110px}
+.g3{grid-column:9/13;margin-top:220px}
+@media (max-width:760px){.g1{grid-column:1/8}.g2{grid-column:6/13;margin-top:-40px}.g3{grid-column:2/10;margin-top:-40px}}
+.sk{fill:none;stroke:#3B3833;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.sk-g{fill:none;stroke:var(--gold);stroke-width:1.6;stroke-linecap:round}
+.f1{fill:#D9D4CC}.f2{fill:#C9C2B6}.f3{fill:#BBA88A}.f4{fill:#8F8A82}.f5{fill:#ECE9E3}.f6{fill:#A88B67}.fg{fill:var(--gold)}.fl{fill:#7E8F72}
+.pendant{transform-box:fill-box;transform-origin:top center;animation:sway 4.5s ease-in-out infinite alternate}
+
+/* promo split */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:56px;align-items:center}
+.split .display{text-align:left}
+.split .lede+.lede{margin-top:16px}
+@media (max-width:860px){.split{grid-template-columns:1fr}}
+.iso{background:var(--night);position:relative;overflow:hidden}
+.iso svg{display:block;width:100%;height:auto}
+.iso .badge{position:absolute;top:18px;right:18px;font-family:var(--f-serif);font-style:italic;color:var(--gold-soft);font-size:1.1rem;border:1px solid var(--night-line);padding:6px 14px}
+.iso .ln{stroke:var(--gold);stroke-width:1.3;fill:none;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:1;animation:draw 2.4s ease var(--d,0s) both, isoloop 9s ease-in-out calc(var(--d,0s) + 3s) infinite}
+@keyframes isoloop{0%,70%{stroke-dashoffset:0}85%{stroke-dashoffset:1}100%{stroke-dashoffset:0}}
+.iso .fill{animation:fillin 1s ease 2s both}
+.iso .scan{animation:scan 4s ease-in-out infinite alternate}
+@keyframes scan{from{transform:translateY(0)}to{transform:translateY(300px)}}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:56px 32px;margin-top:64px}
+.svc{display:flex;flex-direction:column;gap:14px;min-width:0}
+.svc .pic{aspect-ratio:4/3;max-width:100%;background:var(--paper-2);display:grid;place-items:center;overflow:hidden;position:relative}
+.svc .pic::before{content:"";position:absolute;inset:14px;border:1px solid color-mix(in srgb,var(--gold),transparent 50%);transition:inset .4s ease}
+.svc:hover .pic::before{inset:8px}
+.svc .pic svg{width:42%;height:auto;fill:none;stroke:var(--ink);stroke-width:.9;stroke-linecap:round;stroke-linejoin:round;transition:transform .6s cubic-bezier(.3,1.4,.5,1)}
+.svc .pic svg .g{stroke:var(--gold);stroke-width:1.1}
+.svc:hover .pic svg{transform:translateY(-6px) scale(1.06)}
+.svc p{color:var(--muted)}
+.svc .spec{font-size:.85rem;color:var(--gold-deep);letter-spacing:.06em}
+.svc .ask{align-self:flex-start;margin-top:6px;padding:12px 20px}
+@media (max-width:900px){.svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.svc-grid{grid-template-columns:1fr}}
+
+/* steps */
+.steps{list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;position:relative;counter-reset:s}
+.steps::before{content:"";position:absolute;left:0;right:0;top:44px;height:1px;background:var(--line)}
+.steps::after{content:"";position:absolute;left:0;top:44px;height:1px;width:100%;background:var(--gold);transform-origin:left;animation:progress 6s ease-in-out infinite}
+@keyframes progress{0%{transform:scaleX(0)}70%,100%{transform:scaleX(1)}}
+.steps li{counter-increment:s;padding-right:24px;position:relative;min-width:0}
+.steps li::before{content:counter(s);display:block;font-family:var(--f-serif);font-style:italic;font-size:3.6rem;line-height:1;color:var(--gold);height:44px;overflow:visible}
+.steps li::after{content:"";position:absolute;top:40px;left:0;width:9px;height:9px;background:var(--paper);border:1px solid var(--gold);transform:rotate(45deg)}
+.steps .wk{display:block;margin-top:30px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep)}
+html.zh .steps .wk{letter-spacing:.08em;font-size:.9rem}
+.steps h3{font-size:1.15rem;margin-top:6px}
+.steps p{color:var(--muted);font-size:.95rem;margin-top:8px}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr;gap:40px 24px}.steps::before,.steps::after{display:none}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* boards */
+.boards{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:28px 20px;margin-top:64px}
+.board{display:flex;flex-direction:column;min-width:0;transition:transform .4s ease}
+.board:hover{transform:translateY(-8px)}
+.face{height:150px}
+.edge{height:calc(var(--t) * 1.8px)}
+.board h3{margin-top:16px;font-size:1rem}
+.board p{color:var(--muted);font-size:.88rem}
+.birch .face{background:repeating-linear-gradient(94deg,var(--ply-a) 0 9px,color-mix(in srgb,var(--ply-a),var(--glue) 10%) 9px 10px,var(--ply-a) 10px 21px)}
+.birch .edge{background:repeating-linear-gradient(180deg,var(--ply-a) 0 1.6px,var(--glue) 1.6px 2.3px,var(--ply-b) 2.3px 3.9px,var(--glue) 3.9px 4.6px)}
+.oak .face{background:repeating-linear-gradient(88deg,var(--oak) 0 5px,color-mix(in srgb,var(--oak),#3b2410 22%) 5px 6px,var(--oak) 6px 13px,color-mix(in srgb,var(--oak),#fff 12%) 13px 18px)}
+.oak .edge{background:linear-gradient(var(--oak) 0 2px,var(--mdf) 2px calc(100% - 2px),var(--oak) calc(100% - 2px))}
+.teak .face{background:repeating-linear-gradient(91deg,var(--teak) 0 9px,color-mix(in srgb,var(--teak),#1d0f05 30%) 9px 10px,var(--teak) 10px 16px)}
+.teak .edge{background:linear-gradient(#2a1a0e 0 2px,var(--chip) 2px)}
+.mel .face{background:var(--white-face);outline:1px solid var(--line);outline-offset:-1px}
+.mel .edge{background:linear-gradient(var(--white-face) 0 1px,var(--chip) 1px)}
+.lac .face{background:linear-gradient(160deg,var(--charcoal),#1E2022)}
+.lac .edge{background:linear-gradient(var(--charcoal) 0 2px,var(--mdf) 2px calc(100% - 2px),var(--charcoal) calc(100% - 2px))}
+.quartz .face{background:radial-gradient(circle at 30% 40%,#BDBBB6 0 1px,transparent 2px) 0 0/11px 11px,radial-gradient(circle at 70% 70%,#C8C6C1 0 1px,transparent 2px) 0 0/17px 17px,var(--quartz);outline:1px solid var(--line);outline-offset:-1px}
+.quartz .edge{background:var(--quartz);outline:1px solid var(--line);outline-offset:-1px}
+@media (max-width:980px){.boards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:520px){.boards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* contact band */
+.contact{margin-top:110px;background:var(--night);color:var(--on-night)}
+.contact>.wrap{padding-block:100px}
+.contact .display{color:var(--on-night)}
+.contact .lede{color:var(--night-muted)}
+.quote{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:start;margin-top:56px}
+@media (max-width:900px){.quote{grid-template-columns:1fr}}
+form{display:grid;grid-template-columns:1fr 1fr;gap:26px 24px;min-width:0}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field.full{grid-column:1/-1}
+label{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-soft)}
+html.zh label{letter-spacing:.06em;font-size:.9rem}
+input,select,textarea{font:inherit;font-size:1rem;color:var(--on-night);background:transparent;border:0;border-bottom:1px solid var(--night-line);padding:10px 0;width:100%;border-radius:0}
+select option{color:var(--ink);background:#FFFFFF}
+input::placeholder,textarea::placeholder{color:#6F6A62}
+textarea{min-height:90px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--gold)}
+@media (max-width:520px){form{grid-template-columns:1fr}}
+.chat{background:#0F1A14;border:1px solid var(--night-line);min-width:0}
+.chat-top{display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--night-2);border-bottom:1px solid var(--night-line)}
+.chat-top .av{width:42px;height:42px;border-radius:50%;flex:none;background:#FFFFFF;overflow:hidden;display:flex;align-items:center}
+.chat-top .av img{height:36px;width:auto;max-width:none;margin-left:-2px}
+.chat-top b{display:block;font-weight:500}
+.chat-top .n{font-size:.9rem;color:var(--night-muted);user-select:all}
+.chat-top .on{margin-left:auto;font-size:.8rem;color:#5ED38F;display:inline-flex;align-items:center;gap:6px}
+.chat-top .on::before{content:"";width:7px;height:7px;border-radius:50%;background:#5ED38F;animation:blink 2s ease-in-out infinite}
+@keyframes blink{50%{opacity:.3}}
+.chat-body{padding:22px 16px;display:flex;flex-direction:column;gap:16px}
+.bubble{align-self:flex-end;max-width:92%;background:var(--bubble);color:#132016;border-radius:14px 14px 3px 14px;padding:12px 14px;margin:0;white-space:pre-wrap;word-break:break-word;font:inherit;font-size:.95rem;line-height:1.55}
+.bubble.bump{animation:bump .35s ease}
+@keyframes bump{50%{transform:scale(1.015)}}
+.chat-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.88rem;color:var(--night-muted)}
+.copy{font:inherit;font-size:.82rem;letter-spacing:.06em;background:none;border:1px solid var(--night-line);color:var(--on-night);padding:7px 14px;cursor:pointer}
+.copy:hover{border-color:var(--gold)}
+
+footer{background:#0B0B0B;color:var(--night-muted);font-size:.92rem}
+footer .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:28px 48px;align-items:center;padding-block:44px 110px}
+footer a{color:var(--on-night);text-decoration:none}
+footer .cols{display:flex;flex-direction:column;gap:4px}
+@media (max-width:760px){footer .wrap{grid-template-columns:1fr}}
+
+.fab{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#FFFFFF;display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.5)}
+.fab::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:ring 2.4s ease-out infinite}
+@keyframes ring{from{transform:scale(1);opacity:.8}to{transform:scale(1.6);opacity:0}}
+
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion: no-preference){
+    .rv{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 70%}
+    .px{animation:para linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
+  }
+}
+@keyframes rise{from{opacity:.1;transform:translateY(50px)}}
+@keyframes para{from{transform:translateY(40px)}to{transform:translateY(-40px)}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm0 18.150c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.17c-.25-.12-1.47-.72-1.7-.81-.22-.08-.39-.12-.55.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.13-.55-1.34-.76-1.83-.2-.48-.4-.42-.55-.42h-.47c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29Z"/></symbol>
+  <symbol id="arr" viewBox="0 0 22 10"><path d="M0 5h20M16 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+</svg>
+
+<header class="top" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="isense-logo.png" alt="iSense Interior Design" width="123" height="42"></a>
+    <nav class="nav">
+      <a class="link" href="#about"><span lang="en">About</span><span lang="zh">关于我们</span></a>
+      <a class="link" href="#services"><span lang="en">Services</span><span lang="zh">服务</span></a>
+      <a class="link" href="#process"><span lang="en">Process</span><span lang="zh">流程</span></a>
+      <a class="link" href="#materials"><span lang="en">Materials</span><span lang="zh">材料</span></a>
+      <div class="langs" role="group" aria-label="Language / 语言">
+        <button type="button" id="lang-en" data-set="en" aria-pressed="true">EN</button>
+        <button type="button" id="lang-zh" data-set="zh" aria-pressed="false">中文</button>
+      </div>
+      <a class="btn btn-gold" data-wa href="#contact" target="_blank" rel="noopener"><svg class="w" width="18" height="18" aria-hidden="true"><use href="#wa"/></svg><span class="lbl"><span lang="en">Get a quote</span><span lang="zh">免费报价</span></span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="scene" aria-hidden="true">
+      <svg class="room" viewBox="0 0 1300 640" preserveAspectRatio="xMidYMax meet">
+        <defs>
+          <radialGradient id="glow"><stop offset="0" stop-color="#F3D58C" stop-opacity=".55"/><stop offset="1" stop-color="#F3D58C" stop-opacity="0"/></radialGradient>
+          <linearGradient id="beamg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9C77A" stop-opacity=".22"/><stop offset="1" stop-color="#E9C77A" stop-opacity="0"/></linearGradient>
+          <pattern id="flute" width="14" height="10" patternUnits="userSpaceOnUse"><rect width="14" height="10" fill="#3B2F23"/><rect x="12" width="2" height="10" fill="#57452F"/></pattern>
+          <clipPath id="tvclip"><rect x="232" y="250" width="236" height="132"/></clipPath>
+        </defs>
+        <!-- ceiling and floor lines -->
+        <line class="ln" pathLength="1" x1="0" y1="600" x2="1300" y2="600" style="--d:0s"/>
+        <path class="ln h-none" pathLength="1" d="M0 120h1300" style="--d:.1s;opacity:.4"/>
+        <!-- window with light -->
+        <rect class="ln h-glass" pathLength="1" x="760" y="150" width="300" height="320" style="--d:.2s"/>
+        <path class="ln h-none" pathLength="1" d="M910 150v320M760 310h300" style="--d:.5s"/>
+        <polygon class="beam" points="760,470 1060,470 1180,600 700,600" fill="url(#beamg)"/>
+        <!-- fluted TV wall -->
+        <rect class="ln" pathLength="1" x="180" y="170" width="340" height="340" fill="url(#flute)" style="--d:0s"/>
+        <rect class="ln h-dark" pathLength="1" x="230" y="248" width="240" height="136" style="--d:.4s"/>
+        <g clip-path="url(#tvclip)"><polygon class="sweep" points="232,382 280,250 320,250 272,382"/></g>
+        <rect class="ln h-wood" pathLength="1" x="170" y="512" width="360" height="40" style="--d:.6s"/>
+        <path class="ln h-none" pathLength="1" d="M290 512v40M410 512v40" style="--d:.9s"/>
+        <!-- shelf decor -->
+        <path class="ln h-gold" pathLength="1" d="M470 512c-9-9-9-27 0-36h14c9 9 9 27 0 36z" style="--d:1s"/>
+        <path class="ln h-none" pathLength="1" d="M477 476c-3-22 6-36 15-44M477 476c0-15-12-27-22-30" style="--d:1.2s"/>
+        <!-- pendant lamps -->
+        <g class="lamp" style="--ox:640px">
+          <circle class="glow" cx="640" cy="300" r="120"/>
+          <line class="ln" pathLength="1" x1="640" y1="0" x2="640" y2="250" style="--d:.7s"/>
+          <path class="ln h-dark" pathLength="1" d="M612 250h56l18 44h-92z" style="--d:.9s"/>
+          <ellipse class="h-gold" cx="640" cy="296" rx="16" ry="4"/>
+        </g>
+        <g class="lamp l2" style="--ox:700px">
+          <circle class="glow" cx="700" cy="230" r="80"/>
+          <line class="ln" pathLength="1" x1="700" y1="0" x2="700" y2="200" style="--d:.8s"/>
+          <circle class="ln h-dark" pathLength="1" cx="700" cy="214" r="16" style="--d:1s"/>
+        </g>
+        <!-- sofa -->
+        <rect class="ln h-sofa" pathLength="1" x="740" y="440" width="390" height="80" rx="18" style="--d:1s"/>
+        <rect class="ln h-sofa2" pathLength="1" x="720" y="505" width="430" height="80" rx="18" style="--d:1.1s"/>
+        <rect class="ln h-sofa" pathLength="1" x="700" y="470" width="46" height="115" rx="16" style="--d:1.2s"/>
+        <rect class="ln h-sofa" pathLength="1" x="1124" y="470" width="46" height="115" rx="16" style="--d:1.2s"/>
+        <rect class="ln h-gold" pathLength="1" x="780" y="452" width="70" height="52" rx="12" style="--d:1.4s;fill-opacity:.8"/>
+        <rect class="ln h-wood2" pathLength="1" x="1020" y="452" width="70" height="52" rx="12" style="--d:1.5s"/>
+        <!-- coffee table -->
+        <ellipse class="ln h-wood" pathLength="1" cx="940" cy="608" rx="120" ry="16" style="--d:1.6s"/>
+        <!-- plant -->
+        <path class="ln h-wood2" pathLength="1" d="M1085 520h40l-6 80h-28z" style="--d:1.3s"/>
+        <g class="plant">
+          <path class="ln h-leaf" pathLength="1" d="M1105 520c-30-30-36-80-20-110 12 30 24 70 20 110z" style="--d:1.6s"/>
+          <path class="ln h-leaf" pathLength="1" d="M1105 520c6-46 22-80 40-90-2 40-16 70-40 90z" style="--d:1.7s"/>
+          <path class="ln h-leaf" pathLength="1" d="M1105 520c-16-18-40-26-60-24 12 18 36 28 60 24z" style="--d:1.8s"/>
+        </g>
+      </svg>
+    </div>
+    <div class="wrap inner">
+      <p class="tagline"><span lang="en">Interior design and carpentry</span><span lang="zh">室内设计 与 订制木工</span></p>
+      <h1 class="display"><span lang="en">Bespoke homes,<em>made for real life</em></span><span lang="zh">订制好家<em>为生活而设计</em></span></h1>
+      <p class="lede"><span lang="en">We design your space in 3D, build every cabinet in our own workshop, and install it with the same team.</span><span lang="zh">我们用 3D 设计您的空间，在自家工厂制作每一件柜子，再由同一个团队上门安装。</span></p>
+      <div class="btns">
+        <a class="btn btn-gold" data-wa href="#contact" target="_blank" rel="noopener"><span lang="en">Book a free consultation</span><span lang="zh">预约免费咨询</span><svg class="arr" aria-hidden="true"><use href="#arr"/></svg></a>
+      </div>
+    </div>
+    <div class="watermark" aria-hidden="true">iSense Interior · iSense Interior</div>
+    <span class="scroll-cue" aria-hidden="true"></span>
+  </section>
+
+  <div class="ribbon" aria-hidden="true"><div class="track" id="track"></div></div>
+
+  <section class="sec" id="about">
+    <div class="wrap center">
+      <h2 class="display rv"><span lang="en">Designing homes<em>across Malaysia</em></span><span lang="zh">为马来西亚家庭<em>打造理想空间</em></span></h2>
+      <p class="lede rv" style="margin-top:22px"><span lang="en">From condos and apartments to landed homes and shop lots. iSense plans the layout, picks the materials with you, and builds it to the millimetre, so the finished space looks like the 3D drawing you approved.</span><span lang="zh">从公寓、有地住宅到店屋，iSense 帮您规划布局、一起挑选材料，再精确到毫米地制作，让完工的空间和您确认过的 3D 图一模一样。</span></p>
+      <div class="btns rv">
+        <a class="btn btn-gold" data-wa href="#contact" target="_blank" rel="noopener"><span lang="en">Book a consultation</span><span lang="zh">预约咨询</span><svg class="arr" aria-hidden="true"><use href="#arr"/></svg></a>
+        <a class="btn btn-outline" href="#services"><span lang="en">See what we do</span><span lang="zh">查看服务</span><svg class="arr" aria-hidden="true"><use href="#arr"/></svg></a>
+      </div>
+
+      <div class="gallery">
+        <figure class="frame g1 px">
+          <svg viewBox="0 0 300 380" role="img" aria-label="Kitchen illustration / 厨房插图"><g class="art">
+            <rect width="300" height="380" class="f5"/>
+            <rect x="0" y="250" width="300" height="130" class="f1"/>
+            <rect x="30" y="60" width="240" height="70" class="f2 sk"/><path class="sk" d="M90 60v70M150 60v70M210 60v70"/>
+            <rect x="30" y="170" width="240" height="80" class="f6 sk"/><path class="sk" d="M30 182h240M110 182v68M190 182v68"/>
+            <rect x="60" y="270" width="180" height="70" class="f4 sk"/><rect x="50" y="262" width="200" height="10" class="f5 sk"/>
+            <g class="pendant"><path class="sk" d="M110 0v190"/><path class="sk-g fg" d="M98 190h24l6 14h-36z"/></g>
+            <g class="pendant" style="animation-delay:-2s"><path class="sk" d="M190 0v190"/><path class="sk-g fg" d="M178 190h24l6 14h-36z"/></g>
+          </g></svg>
+          <figcaption><span lang="en">Kitchen</span><span lang="zh">厨房</span></figcaption>
+        </figure>
+        <figure class="frame g2 px">
+          <svg viewBox="0 0 300 380" role="img" aria-label="Living room illustration / 客厅插图"><g class="art">
+            <rect width="300" height="380" class="f1"/>
+            <rect x="0" y="290" width="300" height="90" class="f2"/>
+            <circle cx="150" cy="130" r="54" class="f5 sk"/><circle cx="150" cy="130" r="46" class="sk-g"/>
+            <rect x="40" y="230" width="220" height="50" rx="14" class="f6 sk"/><rect x="30" y="262" width="240" height="44" rx="14" class="f3 sk"/>
+            <path class="sk" d="M50 306v14M250 306v14"/>
+            <path class="sk" d="M272 120v190M262 310h20"/><path class="sk-g fg" d="M258 100h28l-5 22h-18z"/>
+            <rect x="70" y="244" width="34" height="26" rx="6" class="fg"/>
+          </g></svg>
+          <figcaption><span lang="en">Living room</span><span lang="zh">客厅</span></figcaption>
+        </figure>
+        <figure class="frame g3 px">
+          <svg viewBox="0 0 300 380" role="img" aria-label="Wardrobe illustration / 衣柜插图"><g class="art">
+            <rect width="300" height="380" class="f2"/>
+            <rect x="30" y="30" width="240" height="320" class="f5 sk"/>
+            <path class="sk" d="M110 30v320M190 30v320M30 300h240"/>
+            <path class="sk-g" d="M40 70h60M120 70h60"/>
+            <path class="sk" d="M50 70v60M62 70v80M74 70v70M86 70v90M130 70v70M142 70v60M154 70v86M166 70v66"/>
+            <path class="sk" d="M190 110h80M190 170h80M190 230h80"/>
+            <rect x="200" y="120" width="26" height="40" class="f6"/><rect x="232" y="132" width="26" height="28" class="f4"/>
+            <path class="sk-g" d="M60 320h20M140 320h20M220 320h20"/>
+          </g></svg>
+          <figcaption><span lang="en">Wardrobe</span><span lang="zh">衣柜</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section class="sec">
+    <div class="wrap split">
+      <div class="rv">
+        <h2 class="display"><span lang="en">Your 3D design,<em>free of charge</em></span><span lang="zh">3D 设计图<em>免费为您做</em></span></h2>
+        <p class="lede" style="margin-top:22px"><span lang="en">Tell us about your space and we will draw it in 3D, with your layout, colours and finishes, before you commit to anything.</span><span lang="zh">告诉我们您的空间需求，我们会先把布局、颜色和饰面画成 3D 图给您看，您满意了再决定。</span></p>
+        <p class="lede"><span lang="en">Whether it is one wardrobe or the whole home, you see the result first.</span><span lang="zh">不管是一个衣柜还是全屋装修，都可以先看到效果。</span></p>
+        <div class="btns"><a class="btn btn-gold" data-wa href="#contact" target="_blank" rel="noopener"><span lang="en">Get my free 3D design</span><span lang="zh">领取免费 3D 设计</span><svg class="arr" aria-hidden="true"><use href="#arr"/></svg></a></div>
+      </div>
+      <div class="iso rv" aria-hidden="true">
+        <span class="badge">3D</span>
+        <svg viewBox="0 0 520 400">
+          <defs><linearGradient id="scang" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#B89E6A" stop-opacity="0"/><stop offset="1" stop-color="#B89E6A" stop-opacity=".25"/></linearGradient></defs>
+          <!-- room shell -->
+          <path class="ln" pathLength="1" d="M260 340 470 230 470 70 260 180 50 70 50 230Z" style="--d:0s"/>
+          <path class="ln" pathLength="1" d="M260 180v160M50 230l210 110 210-110" style="--d:.3s"/>
+          <!-- wardrobe on left wall -->
+          <path class="ln" pathLength="1" d="M80 110l120 62v120L80 230Z" style="--d:.7s"/>
+          <path class="ln" pathLength="1" d="M120 131v118M160 151v118" style="--d:1s"/>
+          <!-- kitchen counter on right wall -->
+          <path class="ln" pathLength="1" d="M300 240l140-73v40l-140 73Z" style="--d:1.1s"/>
+          <path class="ln" pathLength="1" d="M300 240l-20-10 140-73 20 10" style="--d:1.3s"/>
+          <path class="ln" pathLength="1" d="M330 140l100-52v34l-100 52Z" style="--d:1.4s"/>
+          <!-- island -->
+          <path class="ln" pathLength="1" d="M210 300l70-36 50 26-70 36Z M210 300v18l50 26v-18M330 290v18l-70 36" style="--d:1.6s"/>
+          <!-- pendant -->
+          <path class="ln" pathLength="1" d="M270 120v80M260 200h20l6 12h-32z" style="--d:1.8s"/>
+          <rect class="scan" x="50" y="60" width="420" height="16" fill="url(#scang)"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section class="sec" id="services">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="display rv"><span lang="en">What we do<em>for your home</em></span><span lang="zh">我们的服务<em>为您的家而做</em></span></h2>
+      </div>
+      <div class="svc-grid">
+        <article class="svc rv">
+          <div class="pic"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="6" y="28" width="52" height="28"/><path d="M6 36h52M32 28v28M6 8h52v12H6z"/><path class="g" d="M24 46h-4M44 46h-4M20 14h6M38 14h6"/></svg></div>
+          <h3><span lang="en">Kitchen cabinets</span><span lang="zh">厨房橱柜</span></h3>
+          <p><span lang="en">Base and wall units, tall pantry, island, and quartz or compact laminate worktops.</span><span lang="zh">地柜、吊柜、高柜、中岛台，台面可选石英石或实芯板。</span></p>
+          <span class="spec"><span lang="en">Usually 3 to 4.5 m long</span><span lang="zh">一般 3 至 4.5 米长</span></span>
+          <a class="btn btn-outline ask" data-svc="0" href="#contact" target="_blank" rel="noopener"><span lang="en">Ask about this</span><span lang="zh">咨询这项服务</span><svg class="arr" aria-hidden="true"><use href="#arr"/></svg></a>
+        </article>
+        <article class="svc rv">
+          <div class="pic"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="4" width="40" height="56"/><path d="M32 4v56M12 50h40"/><path class="g" d="M28 26v8M36 26v8"/></svg></div>
+          <h3><span lang="en">Wardrobes and walk-ins</span><span lang="zh">衣柜与衣帽间</span></h3>
+          <p><span lang="en">Swing or sliding doors, floor to ceiling, with drawers, shoe racks and lighting inside.</span><span lang="zh">平开门或趟门，顶天立地，内配抽屉、鞋架和灯光。</span></p>
+          <span class="spec"><span lang="en">600 mm deep</span><span lang="zh">深 600 毫米</span></span>
+          <a class="btn btn-outline ask" data-svc="1" href="#contact" target="_blank" rel="noopener"><span lang="en">Ask about this</span><span lang="zh">咨询这项服务</span><svg class="arr" aria-hidden="true"><use href="#arr"/></svg></a>
+        </article>
+        <article class="svc rv">
+          <div class="pic"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M4 8h56v40H4z"/><path d="M8 8v40M12 8v40M16 8v40M48 8v40M52 8v40M56 8v40"/><rect x="20" y="16" width="24" height="16"/><path class="g" d="M10 52h44v6H10z"/></svg></div>
+          <h3><span lang="en">TV and feature walls</span><span lang="zh">电视墙与背景墙</span></h3>
+          <p><span lang="en">Fluted panels, a floating console and hidden cable runs, all on one wall.</span><span lang="zh">格栅板、悬空电视柜、隐藏走线，一面墙全部搞定。</span></p>
+          <span class="spec"><span lang="en">Slats at 25 mm spacing</span><span lang="zh">格栅间距 25 毫米</span></span>
+          <a class="btn btn-outline ask" data-svc="2" href="#contact" target="_blank" rel="noopener"><span lang="en">Ask about this</span><span lang="zh">咨询这项服务</span><svg class="arr" aria-hidden="true"><use href="#arr"/></svg></a>
+        </article>
+        <article class="svc rv">
+          <div class="pic"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M4 30h56M8 30v30M56 30v30M36 30v14h20"/><rect x="18" y="8" width="22" height="14"/><path d="M29 22v8"/><path class="g" d="M44 6l8 0M48 6v18"/></svg></div>
+          <h3><span lang="en">Study and home office</span><span lang="zh">书房与家庭办公</span></h3>
+          <p><span lang="en">Desks, bookshelves and overhead storage sized to the room and to your equipment.</span><span lang="zh">书桌、书架、吊柜，按房间和您的设备尺寸订做。</span></p>
+          <span class="spec"><span lang="en">Desk 730 to 750 mm high</span><span lang="zh">桌高 730 至 750 毫米</span></span>
+          <a class="btn btn-outline ask" data-svc="3" href="#contact" target="_blank" rel="noopener"><span lang="en">Ask about this</span><span lang="zh">咨询这项服务</span><svg class="arr" aria-hidden="true"><use href="#arr"/></svg></a>
+        </article>
+        <article class="svc rv">
+          <div class="pic"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M6 22 10 8h44l4 14"/><path d="M6 22h52a8 8 0 0 1-17 0 8 8 0 0 1-18 0 8 8 0 0 1-17 0"/><path d="M10 30v28h44V30"/><path class="g" d="M26 58V44h12v14"/></svg></div>
+          <h3><span lang="en">Shop and office fit-out</span><span lang="zh">店铺与办公室装修</span></h3>
+          <p><span lang="en">Counters, display shelving and reception desks, finished before your opening day.</span><span lang="zh">柜台、展示架、前台，在开业前完工。</span></p>
+          <span class="spec"><span lang="en">Night and weekend installs</span><span lang="zh">可夜间及周末安装</span></span>
+          <a class="btn btn-outline ask" data-svc="4" href="#contact" target="_blank" rel="noopener"><span lang="en">Ask about this</span><span lang="zh">咨询这项服务</span><svg class="arr" aria-hidden="true"><use href="#arr"/></svg></a>
+        </article>
+        <article class="svc rv">
+          <div class="pic"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M6 6h52v52H6z"/><path d="M6 30h22v28M28 30V6M40 30h18M40 30v10"/><path class="g" d="M14 44l6-6 6 6M44 14a6 6 0 1 0 0.01 0"/></svg></div>
+          <h3><span lang="en">Full interior design</span><span lang="zh">全屋室内设计</span></h3>
+          <p><span lang="en">Layout, lighting and materials for the whole home, shown in 3D before work starts.</span><span lang="zh">全屋布局、灯光与材料规划，开工前先看 3D 效果图。</span></p>
+          <span class="spec"><span lang="en">Design fee taken off the build</span><span lang="zh">设计费可抵扣施工费</span></span>
+          <a class="btn btn-outline ask" data-svc="5" href="#contact" target="_blank" rel="noopener"><span lang="en">Ask about this</span><span lang="zh">咨询这项服务</span><svg class="arr" aria-hidden="true"><use href="#arr"/></svg></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section class="sec" id="process">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="display rv"><span lang="en">From first visit<em>to handover</em></span><span lang="zh">从上门量尺<em>到完工交付</em></span></h2>
+        <p class="lede rv" style="margin-top:22px"><span lang="en">A typical wardrobe or kitchen takes about five weeks. Bigger projects take longer in the workshop, but the order stays the same.</span><span lang="zh">一般衣柜或厨房项目约需五周。项目越大，工厂制作时间越长，但顺序不变。</span></p>
+      </div>
+      <ol class="steps">
+        <li class="rv"><span class="wk"><span lang="en">Week 1</span><span lang="zh">第 1 周</span></span><h3><span lang="en">Site measure</span><span lang="zh">上门量尺</span></h3><p><span lang="en">Every wall measured; pipes, sockets and floor level checked.</span><span lang="zh">测量每一面墙，检查水管、插座和地面水平。</span></p></li>
+        <li class="rv"><span class="wk"><span lang="en">Weeks 1 to 2</span><span lang="zh">第 1 至 2 周</span></span><h3><span lang="en">3D design</span><span lang="zh">3D 设计</span></h3><p><span lang="en">Layout, colours and handles, changed until you are happy.</span><span lang="zh">确认布局、颜色和把手，改到满意为止。</span></p></li>
+        <li class="rv"><span class="wk"><span lang="en">Week 2</span><span lang="zh">第 2 周</span></span><h3><span lang="en">Quotation</span><span lang="zh">报价</span></h3><p><span lang="en">Each board, finish and hinge listed with its price.</span><span lang="zh">每块板材、饰面和铰链都逐项列价。</span></p></li>
+        <li class="rv"><span class="wk"><span lang="en">Weeks 3 to 4</span><span lang="zh">第 3 至 4 周</span></span><h3><span lang="en">Workshop build</span><span lang="zh">工厂制作</span></h3><p><span lang="en">Cut, edged and assembled in our workshop, not in your home.</span><span lang="zh">开料、封边、组装都在工厂完成，不在您家锯木。</span></p></li>
+        <li class="rv"><span class="wk"><span lang="en">Week 5</span><span lang="zh">第 5 周</span></span><h3><span lang="en">Install and handover</span><span lang="zh">安装与交付</span></h3><p><span lang="en">One to three days on site. Doors aligned, floor swept.</span><span lang="zh">现场一至三天，门板调齐，地面清扫干净。</span></p></li>
+      </ol>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section class="sec" id="materials">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="display rv"><span lang="en">Boards and finishes<em>seen from the edge</em></span><span lang="zh">板材与饰面<em>从侧边看清楚</em></span></h2>
+        <p class="lede rv" style="margin-top:22px"><span lang="en">Each sample shows the face and the edge, drawn at the same scale so you can compare thickness. Your quote names the exact board.</span><span lang="zh">每个样板都展示正面和侧边，按同一比例画出，方便比较厚度。报价单会写明确切板材。</span></p>
+      </div>
+      <div class="boards">
+        <div class="board birch rv" style="--t:18"><div class="face"></div><div class="edge"></div><h3><span lang="en">Birch plywood</span><span lang="zh">桦木夹板</span></h3><p><span lang="en">18 mm, edge left exposed</span><span lang="zh">18 毫米，露出层次侧边</span></p></div>
+        <div class="board oak rv" style="--t:19.2"><div class="face"></div><div class="edge"></div><h3><span lang="en">Oak veneer</span><span lang="zh">橡木木皮</span></h3><p><span lang="en">0.6 mm each side on 18 mm MDF</span><span lang="zh">18 毫米密度板双面贴 0.6 毫米</span></p></div>
+        <div class="board teak rv" style="--t:18.8"><div class="face"></div><div class="edge"></div><h3><span lang="en">Teak laminate</span><span lang="zh">柚木纹防火板</span></h3><p><span lang="en">0.8 mm laminate on 18 mm board</span><span lang="zh">18 毫米板贴 0.8 毫米防火板</span></p></div>
+        <div class="board mel rv" style="--t:18"><div class="face"></div><div class="edge"></div><h3><span lang="en">Melamine board</span><span lang="zh">三聚氰胺板</span></h3><p><span lang="en">18 mm, moisture resistant</span><span lang="zh">18 毫米，防潮</span></p></div>
+        <div class="board lac rv" style="--t:18"><div class="face"></div><div class="edge"></div><h3><span lang="en">Spray lacquer</span><span lang="zh">喷漆</span></h3><p><span lang="en">Matt, any colour, on 18 mm MDF</span><span lang="zh">哑光，任意颜色，18 毫米密度板</span></p></div>
+        <div class="board quartz rv" style="--t:20"><div class="face"></div><div class="edge"></div><h3><span lang="en">Quartz worktop</span><span lang="zh">石英石台面</span></h3><p><span lang="en">20 mm, 15 mm overhang</span><span lang="zh">20 毫米，出边 15 毫米</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="display"><span lang="en">Start your project<em>on WhatsApp</em></span><span lang="zh">在 WhatsApp<em>开始您的项目</em></span></h2>
+        <p class="lede" style="margin-top:22px"><span lang="en">Fill in what you know. It becomes a WhatsApp message to iSense, and you can send photos of your space once the chat opens.</span><span lang="zh">填写您知道的资料，它会变成一条发给 iSense 的 WhatsApp 讯息。聊天打开后还可以发送空间照片。</span></p>
+      </div>
+      <div class="quote">
+        <form id="qform" novalidate>
+          <div class="field"><label for="q-name"><span lang="en">Your name</span><span lang="zh">您的名字</span></label><input id="q-name" autocomplete="name" data-ph-en="e.g. Aisha" data-ph-zh="例：陈小姐"></div>
+          <div class="field"><label for="q-area"><span lang="en">Area</span><span lang="zh">地区</span></label><input id="q-area" data-ph-en="e.g. Petaling Jaya" data-ph-zh="例：八打灵再也"></div>
+          <div class="field"><label for="q-service"><span lang="en">What do you need?</span><span lang="zh">需要做什么？</span></label><select id="q-service" data-opts="service"></select></div>
+          <div class="field"><label for="q-prop"><span lang="en">Property type</span><span lang="zh">房屋类型</span></label><select id="q-prop" data-opts="prop"></select></div>
+          <div class="field"><label for="q-when"><span lang="en">When should it be done?</span><span lang="zh">希望何时完成？</span></label><select id="q-when" data-opts="when"></select></div>
+          <div class="field"><label for="q-size"><span lang="en">Rough size, if you know</span><span lang="zh">大概尺寸（知道的话）</span></label><input id="q-size" data-ph-en="e.g. wall is 2.4 m wide" data-ph-zh="例：墙宽 2.4 米"></div>
+          <div class="field full"><label for="q-note"><span lang="en">Anything else</span><span lang="zh">其他要求</span></label><textarea id="q-note" data-ph-en="Style you like, colours, what needs storing, budget" data-ph-zh="喜欢的风格、颜色、要收纳什么、预算"></textarea></div>
+        </form>
+        <div class="chat" aria-live="polite">
+          <div class="chat-top"><span class="av" aria-hidden="true"><img src="isense-logo.png" alt=""></span><div><b>iSense Interior Design</b><span class="n num"></span></div><span class="on"><span lang="en">Online</span><span lang="zh">在线</span></span></div>
+          <div class="chat-body">
+            <pre class="bubble" id="preview"></pre>
+            <a id="send" class="btn btn-wa" href="#" target="_blank" rel="noopener"><svg class="w" aria-hidden="true"><use href="#wa"/></svg><span lang="en">Send on WhatsApp</span><span lang="zh">用 WhatsApp 发送</span></a>
+            <div class="chat-foot">
+              <span><span lang="en">Nothing is sent until you press send in WhatsApp.</span><span lang="zh">在 WhatsApp 里按发送之前，不会送出任何讯息。</span></span>
+              <button type="button" class="copy" id="copy"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="logo"><img src="isense-logo.png" alt="iSense Interior Design" width="123" height="42"></span>
+    <div class="cols">
+      <a data-wa href="#contact" target="_blank" rel="noopener">WhatsApp <span class="num"></span></a>
+      <span><span lang="en">Open Monday to Saturday, 9 am to 6 pm. We reply the same day.</span><span lang="zh">周一至周六，早上 9 点至傍晚 6 点营业，当天回复。</span></span>
+    </div>
+    <span>© iSense Interior Design</span>
+  </div>
+</footer>
+
+<a class="fab" data-wa href="#contact" target="_blank" rel="noopener" aria-label="WhatsApp iSense"><svg width="30" height="30" aria-hidden="true"><use href="#wa"/></svg></a>
+
+<script>
+// ── Contact details ──
+const WA_NUMBER = "60123299880";     // country code + number, digits only
+const WA_DISPLAY = "012-3299880";    // how the number is shown on the page
+
+const T = {
+  en: {
+    hello: "Hi iSense, I'd like to book a consultation for my home.",
+    ask: "Hi iSense, I'd like to ask about: ",
+    quote: "Hi iSense, I'd like a quote.",
+    label: { name:"Name", area:"Area", service:"Project", prop:"Property", when:"Timing", size:"Size", note:"Notes" },
+    copy: "Copy number", copied: "Copied", selected: "Number selected",
+    ribbon: ["Kitchens","Wardrobes","Feature walls","Free 3D design","Living rooms","Lighting plans","Shop fit-outs","Free site measure"],
+    opts: {
+      service: ["Kitchen cabinets","Wardrobe or walk-in","TV or feature wall","Study or home office","Shop or office fit-out","Full interior design","Not sure yet"],
+      prop: ["Condo or apartment","Landed house","Shop lot","Office"],
+      when: ["Within a month","In 1 to 3 months","In 3 months or more","Just comparing prices"]
+    }
+  },
+  zh: {
+    hello: "您好 iSense，我想预约家里的装修咨询。",
+    ask: "您好 iSense，我想咨询：",
+    quote: "您好 iSense，我想要一份报价。",
+    label: { name:"名字", area:"地区", service:"项目", prop:"房屋类型", when:"时间", size:"尺寸", note:"备注" },
+    copy: "复制号码", copied: "已复制", selected: "号码已选取",
+    ribbon: ["厨房","衣柜","背景墙","免费 3D 设计","客厅","灯光规划","店铺装修","免费上门量尺"],
+    opts: {
+      service: ["厨房橱柜","衣柜或衣帽间","电视墙或背景墙","书房或家庭办公","店铺或办公室装修","全屋室内设计","还没确定"],
+      prop: ["公寓","有地住宅","店屋","办公室"],
+      when: ["一个月内","一至三个月","三个月以上","先比较价格"]
+    }
+  }
+};
+
+let lang = "en";
+const $ = id => document.getElementById(id);
+const link = t => "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(t);
+document.querySelectorAll(".num").forEach(el => el.textContent = WA_DISPLAY);
+
+function setLang(l){
+  lang = l === "zh" ? "zh" : "en";
+  const root = document.documentElement, t = T[lang];
+  root.classList.toggle("zh", lang === "zh");
+  root.lang = lang === "zh" ? "zh-Hans" : "en";
+  $("lang-en").setAttribute("aria-pressed", lang === "en");
+  $("lang-zh").setAttribute("aria-pressed", lang === "zh");
+  document.querySelectorAll("[data-ph-en]").forEach(el => el.placeholder = lang === "zh" ? el.dataset.phZh : el.dataset.phEn);
+  document.querySelectorAll("select[data-opts]").forEach(sel => {
+    const i = Math.max(0, sel.selectedIndex);
+    sel.innerHTML = "";
+    t.opts[sel.dataset.opts].forEach(o => sel.add(new Option(o)));
+    sel.selectedIndex = i;
+  });
+  $("copy").textContent = t.copy;
+  document.querySelectorAll("[data-wa]").forEach(a => a.href = link(t.hello));
+  document.querySelectorAll("[data-svc]").forEach(a => a.href = link(t.ask + t.opts.service[+a.dataset.svc]));
+  const one = t.ribbon.map(w => `<span class="it">${w}</span>`).join("");
+  $("track").innerHTML = one + one;
+  try { localStorage.setItem("lang", lang); } catch(e){}
+  build(false);
+}
+
+function build(bump){
+  const t = T[lang], L = t.label, v = id => $(id).value.trim();
+  const lines = [t.quote];
+  if (v("q-name")) lines.push(L.name + ": " + v("q-name"));
+  if (v("q-area")) lines.push(L.area + ": " + v("q-area"));
+  lines.push(L.service + ": " + v("q-service"));
+  lines.push(L.prop + ": " + v("q-prop"));
+  lines.push(L.when + ": " + v("q-when"));
+  if (v("q-size")) lines.push(L.size + ": " + v("q-size"));
+  if (v("q-note")) lines.push(L.note + ": " + v("q-note"));
+  const text = lines.join("\n"), pre = $("preview");
+  pre.textContent = text;
+  $("send").href = link(text);
+  if (bump){ pre.classList.remove("bump"); void pre.offsetWidth; pre.classList.add("bump"); }
+}
+
+document.querySelectorAll("[data-set]").forEach(b => b.addEventListener("click", () => setLang(b.dataset.set)));
+$("qform").addEventListener("change", () => build(true));
+$("qform").addEventListener("input", () => build(false));
+$("qform").addEventListener("submit", e => e.preventDefault());
+
+const hdr = $("hdr");
+const onScroll = () => hdr.classList.toggle("solid", window.scrollY > 40);
+window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+let saved = null;
+try { saved = localStorage.getItem("lang"); } catch(e){}
+setLang(saved || ((navigator.language || "").toLowerCase().startsWith("zh") ? "zh" : "en"));
+
+$("copy").addEventListener("click", () => {
+  const btn = $("copy"), t = T[lang];
+  const done = () => { btn.textContent = t.copied; setTimeout(() => btn.textContent = T[lang].copy, 1600); };
+  const fallback = () => { const r = document.createRange(); r.selectNodeContents(document.querySelector(".chat .num")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = t.selected; };
+  try { navigator.clipboard.writeText(WA_DISPLAY).then(done, fallback); } catch(e){ fallback(); }
+});
+</script>
+</body>
+</html>
